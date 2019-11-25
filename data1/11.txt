@@ -1,0 +1,11 @@
+java.lang.NoClassDefFoundError: Could not initialize class InterfaceInitializationStates$I
+        at InterfaceInitializationStates.main(InterfaceInitializationStates.java:152)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: java.lang.NoClassDefFoundError: Could not initialize class InterfaceInitializationStates$I
+JavaTest Message: shutting down test

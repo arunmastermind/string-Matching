@@ -1,0 +1,3 @@
+[](................................................................java.lang.NullPointerException
+        at ArraysNewInstanceBug.run(ArraysNewInstanceBug.java:53)
+        at java.base/java.lang.Thread.run(Thread.java:830)

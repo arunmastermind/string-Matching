@@ -1,0 +1,33 @@
+STDOUT:
+# While printing this message, JVM seems to initiate the output
+# stream, so that it will not need more memory to print later,
+# when the heap would fail to provide more memory.
+#
+# Note, that the test maintains especial static log[] field in
+# order to avoid printing when the heap seems exhausted.
+# Nevertheless, printing could cause OutOfMemoryError even
+# after all the memory allocated by the test is released.
+#
+# That problem is caused by the known JDK/HotSpot bugs:
+#     4239841 (P1/S5) 1.1: poor garbage collector performance
+#     4245060 (P4/S5) poor garbage collector performance
+#
+# This message is just intended to work-around that problem.
+# If printing should fail even so, the test will return the
+# exit status 96 instead of 97 to indicate the problem.
+STDERR:
+Warning: Maximum heap size rounded up to 512 MB
+java.lang.ArrayIndexOutOfBoundsException: 33554432
+        at nsk.stress.except.except004.runTests(except004.java:303)
+        at nsk.stress.except.except004.run(except004.java:202)
+        at nsk.stress.except.except004.run(except004.java:139)
+        at nsk.stress.except.except004.main(except004.java:506)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: java.lang.ArrayIndexOutOfBoundsException: 33554432
+JavaTest Message: shutting down test

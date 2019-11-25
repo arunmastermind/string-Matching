@@ -1,0 +1,41 @@
+STDOUT:
+run [vm.compiler.complog.share.LogCompilationTest, -testedJava, /home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java, -options, -ea -esa -XX:-DisableExplicitGC -XX:-ShowMessageBoxOnError -Xmx2g , -testClass, vm.compiler.complog.uninit.uninit003.uninit003, -parserClass, vm.compiler.complog.uninit.UninitializedTrapCounter, -parserOptions, -classFilter=.*uninit.*]
+/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java
+-ea
+-esa
+-XX:-DisableExplicitGC
+-XX:-ShowMessageBoxOnError
+-Xmx2g
+-XX:+UnlockDiagnosticVMOptions
+-XX:+LogCompilation
+-XX:LogFile=hotspot.log
+vm.compiler.complog.uninit.uninit003.uninit003
+STDERR:
+nsk.share.TestFailure: Error occurred during compilation log parsing.
+        at vm.compiler.complog.share.LogCompilationTest.parse(LogCompilationTest.java:136)
+        at vm.compiler.complog.share.LogCompilationTest.run(LogCompilationTest.java:78)
+        at vm.share.options.OptionSupport.setupAndRun(OptionSupport.java:61)
+        at vm.share.options.OptionSupport.setupAndRun(OptionSupport.java:39)
+        at vm.compiler.complog.share.LogCompilationTest.main(LogCompilationTest.java:73)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at PropertyResolvingWrapper.main(PropertyResolvingWrapper.java:104)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.io.FileNotFoundException: hotspot.log (No such file or directory)
+        at java.base/java.io.FileInputStream.open0(Native Method)
+        at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+        at java.base/java.io.FileInputStream.<init>(FileInputStream.java:155)
+        at java.base/java.util.Scanner.<init>(Scanner.java:639)
+        at vm.compiler.complog.uninit.UninitializedTrapCounter.parse(UninitializedTrapCounter.java:71)
+        at vm.compiler.complog.share.LogCompilationTest.parse(LogCompilationTest.java:134)
+        ... 15 more
+
+JavaTest Message: Test threw exception: nsk.share.TestFailure: Error occurred during compilation log parsing.
+JavaTest Message: shutting down test

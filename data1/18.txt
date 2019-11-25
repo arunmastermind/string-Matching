@@ -1,0 +1,20 @@
+ stdout: [[0.002s][warning][logging] Log tag resolve is not currently supported in Zing, will be ignored
+ThingNumber: 1
+];
+ stderr: []
+ exitValue = 0
+
+java.lang.RuntimeException: '[class,resolve] ClassResolutionTest$ClassResolutionTestMain$Thing1Handler ClassResolutionTest$ClassResolutionTestMain$Thing1' missing from stdout/stderr
+
+        at jdk.test.lib.process.OutputAnalyzer.shouldContain(OutputAnalyzer.java:174)
+        at ClassResolutionTest.main(ClassResolutionTest.java:65)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: '[class,resolve] ClassResolutionTest$ClassResolutionTestMain$Thing1Handler ClassResolutionTest$ClassResolutionTestMain$Thing1' missing from stdout/stderr
+
+JavaTest Message: shutting down test

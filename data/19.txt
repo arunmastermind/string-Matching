@@ -1,0 +1,21 @@
+ stdout: [[0.002s][warning][logging] Log tag biasedlocking is not currently supported in Zing, will be ignored
+Biased Locking test
+];
+ stderr: []
+ exitValue = 0
+
+java.lang.RuntimeException: 'Biased locking enabled' missing from stdout/stderr
+
+        at jdk.test.lib.process.OutputAnalyzer.shouldContain(OutputAnalyzer.java:174)
+        at BiasedLockingTest.analyzeOutputOn(BiasedLockingTest.java:40)
+        at BiasedLockingTest.main(BiasedLockingTest.java:55)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: 'Biased locking enabled' missing from stdout/stderr
+
+JavaTest Message: shutting down test

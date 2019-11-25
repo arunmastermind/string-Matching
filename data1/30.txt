@@ -1,0 +1,15 @@
+STDOUT:
+Verification is enabled
+Got expected exception:java.lang.NoSuchMethodError: 'void TestInvokeErrors$MissingMethod.priv_invoke()'
+STDERR:
+java.lang.NoSuchMethodError: TestInvokeErrors$MissingMethodWithSuper: method priv_invoke()V not found
+        at TestInvokeErrors.main(TestInvokeErrors.java:102)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: java.lang.NoSuchMethodError: TestInvokeErrors$MissingMethodWithSuper: method priv_invoke()V not found
+JavaTest Message: shutting down test

@@ -1,0 +1,80 @@
+STDOUT:
+Starting test application
+Command line: [/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java -cp /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/com/sun/tools/attach/StartManagementAgent.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/jdk/com/sun/tools/attach:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/javatest.jar:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/jtreg.jar -ea -esa -XX:-DisableExplicitGC -XX:-ShowMessageBoxOnError -Xmx2g -XX:+UsePerfData -XX:+EnableDynamicAgentLoading -Dattach.test=true -classpath /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/com/sun/tools/attach/StartManagementAgent.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib Application ]
+Application started
+[runApplication]:/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java -cp /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/com/sun/tools/attach/StartManagementAgent.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/jdk/com/sun/tools/attach:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/javatest.jar:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/jtreg.jar -ea -esa -XX:-DisableExplicitGC -XX:-ShowMessageBoxOnError -Xmx2g -XX:+UsePerfData -XX:+EnableDynamicAgentLoading -Dattach.test=true -classpath /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/com/sun/tools/attach/StartManagementAgent.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib Application
+[runApplication] ready
+Starting management agent with null
+Starting management agent with bogus port
+StartManagementAgent got unexpected exception: com.sun.tools.attach.AttachOperationFailedException: java.lang.RuntimeException: jdk.internal.agent.AgentConfigurationError
+RunnerUtil.stopApplication waiting for shutdown
+[2019-10-19T00:46:33.777208750Z] Gathering output for process 53057
+[2019-10-19T00:46:33.862442718Z] Waiting for completion for process 53057
+[2019-10-19T00:46:33.862876813Z] Waiting for completion finished for process 53057
+--- ProcessLog ---
+cmd: /home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java -cp /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/com/sun/tools/attach/StartManagementAgent.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/jdk/com/sun/tools/attach:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/javatest.jar:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/jtreg.jar -ea -esa -XX:-DisableExplicitGC -XX:-ShowMessageBoxOnError -Xmx2g -XX:+UsePerfData -XX:+EnableDynamicAgentLoading -Dattach.test=true -classpath /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/com/sun/tools/attach/StartManagementAgent.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib Application
+exitvalue: 0
+stderr:
+stdout:
+
+[2019-10-19T00:46:33.869204792Z] Waiting for completion for process 53057
+[2019-10-19T00:46:33.869549262Z] Waiting for completion finished for process 53057
+STDERR:
+[runApplication] Error: Invalid com.sun.management.jmxremote.port number: No port specified
+[runApplication] jdk.internal.agent.AgentConfigurationError
+[runApplication]        at jdk.management.agent/jdk.internal.agent.Agent.startRemoteManagementAgent(Agent.java:392)
+Detaching from VM ...
+Detached
+com.sun.tools.attach.AttachOperationFailedException: java.lang.RuntimeException: jdk.internal.agent.AgentConfigurationError
+        at jdk.attach/sun.tools.attach.VirtualMachineImpl.execute(VirtualMachineImpl.java:224)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.executeCommand(HotSpotVirtualMachine.java:317)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.executeJCmd(HotSpotVirtualMachine.java:299)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.startManagementAgent(HotSpotVirtualMachine.java:237)
+        at StartManagementAgent.basicTests(StartManagementAgent.java:98)
+        at StartManagementAgent.runTests(StartManagementAgent.java:121)
+        at StartManagementAgent.main(StartManagementAgent.java:64)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+java.io.IOException: Stream closed
+        at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:169)
+        at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:335)
+        at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:245)
+        at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:285)
+        at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:344)
+        at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+        at jdk.test.lib.process.StreamPumper.run(StreamPumper.java:109)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+java.io.IOException: Stream closed
+        at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:169)
+        at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:335)
+        at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:245)
+        at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:285)
+        at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:344)
+        at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+        at jdk.test.lib.process.StreamPumper.run(StreamPumper.java:109)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+com.sun.tools.attach.AttachOperationFailedException: java.lang.RuntimeException: jdk.internal.agent.AgentConfigurationError
+        at jdk.attach/sun.tools.attach.VirtualMachineImpl.execute(VirtualMachineImpl.java:224)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.executeCommand(HotSpotVirtualMachine.java:317)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.executeJCmd(HotSpotVirtualMachine.java:299)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.startManagementAgent(HotSpotVirtualMachine.java:237)
+        at StartManagementAgent.basicTests(StartManagementAgent.java:98)
+        at StartManagementAgent.runTests(StartManagementAgent.java:121)
+        at StartManagementAgent.main(StartManagementAgent.java:64)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: com.sun.tools.attach.AttachOperationFailedException: java.lang.RuntimeException: jdk.internal.agent.AgentConfigurationError
+JavaTest Message: shutting down test

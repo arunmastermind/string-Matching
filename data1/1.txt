@@ -1,0 +1,34 @@
+Zing 64-Bit Tiered VM error: Unrecognized VM option '+HandshakeALot'
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+rerun:
+cd /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/runtime/handshake/HandshakeSuspendExitTest && \
+DISPLAY=unicron:25 \
+HOME=/home/sqatest \
+LANG=en_US.utf-8 \
+LC_ALL=en_US.utf-8 \
+LC_CTYPE=UTF-8 \
+PATH=/bin:/usr/bin \
+CLASSPATH=/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/runtime/handshake/HandshakeSuspendExitTest.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/runtime/handshake:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/testlibrary:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/testlibrary:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/lib:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/javatest.jar:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/jtreg.jar \
+    /home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java \
+        -Dtest.src=/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/runtime/handshake \
+        -Dtest.src.path=/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/runtime/handshake:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/testlibrary:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/lib \
+        -Dtest.classes=/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/runtime/handshake/HandshakeSuspendExitTest.d \
+        -Dtest.class.path=/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/runtime/handshake/HandshakeSuspendExitTest.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/testlibrary:/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/test/lib \
+        -Dtest.vm.opts='-ea -esa -XX:-DisableExplicitGC -XX:-ShowMessageBoxOnError -Xmx2g' \
+        -Dtest.tool.vm.opts='-J-ea -J-esa -J-XX:-DisableExplicitGC -J-XX:-ShowMessageBoxOnError -J-Xmx2g' \
+        -Dtest.compiler.opts= \
+        -Dtest.java.opts= \
+        -Dtest.jdk=/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product \
+        -Dcompile.jdk=/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product \
+        -Dtest.timeout.factor=4.0 \
+        -Dtest.root=/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg \
+        -ea \
+        -esa \
+        -XX:-DisableExplicitGC \
+        -XX:-ShowMessageBoxOnError \
+        -Xmx2g \
+        -XX:+UnlockDiagnosticVMOptions \
+        -XX:GuaranteedSafepointInterval=1 \
+        -XX:+HandshakeALot \
+        com.sun.javatest.regtest.agent.MainWrapper /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/runtime/handshake/HandshakeSuspendExitTest.d/main.0.jta

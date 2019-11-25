@@ -1,0 +1,46 @@
+java.lang.IllegalAccessError: failed to access class com.g.Base from class com.n.InnerClassesTest (com.g.Base and com.n.InnerClassesTest are in unnamed module of loader 'app')
+        at java.base/java.lang.Class.getDeclaringClass0(Native Method)
+        at java.base/java.lang.Class.isTopLevelClass(Class.java:1694)
+        at java.base/java.lang.Class.getSimpleBinaryName(Class.java:1679)
+        at java.base/java.lang.Class.getSimpleName0(Class.java:1568)
+        at java.base/java.lang.Class.getSimpleName(Class.java:1559)
+        at com.n.InnerClassesTest.main(InnerClassesTest.jasm)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: java.lang.IllegalAccessError: failed to access class com.g.Base from class com.n.InnerClassesTest (com.g.Base and com.n.InnerClassesTest are in unnamed module of loader 'app')
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.IllegalAccessError: failed to access class com.g.Base from class com.n.InnerClassesTest (com.g.Base and com.n.InnerClassesTest are in unnamed module of loader 'app')
+rerun:
+cd /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/runtime/InnerClassesAttr/InnerClassesTest && \
+DISPLAY=unicron:25 \
+HOME=/home/sqatest \
+LANG=en_US.utf-8 \
+LC_ALL=en_US.utf-8 \
+LC_CTYPE=UTF-8 \
+PATH=/bin:/usr/bin \
+CLASSPATH=/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/runtime/InnerClassesAttr/InnerClassesTest.d:/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/runtime/InnerClassesAttr:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/javatest.jar:/home/sqatest/avaneesh/jtreg/jdk13/harness/jtreg/lib/jtreg.jar \
+    /home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product/bin/java \
+        -Dtest.src=/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/runtime/InnerClassesAttr \
+        -Dtest.src.path=/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg/runtime/InnerClassesAttr \
+        -Dtest.classes=/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/runtime/InnerClassesAttr/InnerClassesTest.d \
+        -Dtest.class.path=/home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/classes/runtime/InnerClassesAttr/InnerClassesTest.d \
+        -Dtest.vm.opts='-ea -esa -XX:-DisableExplicitGC -XX:-ShowMessageBoxOnError -Xmx2g' \
+        -Dtest.tool.vm.opts='-J-ea -J-esa -J-XX:-DisableExplicitGC -J-XX:-ShowMessageBoxOnError -J-Xmx2g' \
+        -Dtest.compiler.opts= \
+        -Dtest.java.opts= \
+        -Dtest.jdk=/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product \
+        -Dcompile.jdk=/home/buildmaster/nightly/ZVM/dev/in_progress/zvm-dev-2907/sandbox/azlinux/jdk13/x86_64/product \
+        -Dtest.timeout.factor=4.0 \
+        -Dtest.root=/home/sqatest/avaneesh/jtreg/jdk13/dump/tests_list/test/hotspot/jtreg \
+        -ea \
+        -esa \
+        -XX:-DisableExplicitGC \
+        -XX:-ShowMessageBoxOnError \
+        -Xmx2g \
+        com.sun.javatest.regtest.agent.MainWrapper /home/sqatest/avaneesh/jtreg/jdk13/dump/zing_serial/dump/serial_jtreg_run_cthulhu_1/runtime/InnerClassesAttr/InnerClassesTest.d/main.0.jta

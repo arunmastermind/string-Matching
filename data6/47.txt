@@ -1,0 +1,22 @@
+STDOUT:
+name = 908@cthulhu
+vmid = 908
+STDERR:
+Error: Invalid com.sun.management.jmxremote.port number: No port specified
+jdk.internal.agent.AgentConfigurationError
+        at jdk.management.agent/jdk.internal.agent.Agent.startRemoteManagementAgent(Agent.java:392)
+com.sun.tools.attach.AttachOperationFailedException: java.lang.RuntimeException: jdk.internal.agent.AgentConfigurationError
+        at jdk.attach/sun.tools.attach.VirtualMachineImpl.execute(VirtualMachineImpl.java:224)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.executeCommand(HotSpotVirtualMachine.java:317)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.executeJCmd(HotSpotVirtualMachine.java:299)
+        at jdk.attach/sun.tools.attach.HotSpotVirtualMachine.startManagementAgent(HotSpotVirtualMachine.java:237)
+        at JvmstatCountersTest.main(JvmstatCountersTest.java:155)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+
+JavaTest Message: Test threw exception: com.sun.tools.attach.AttachOperationFailedException: java.lang.RuntimeException: jdk.internal.agent.AgentConfigurationError
+JavaTest Message: shutting down test

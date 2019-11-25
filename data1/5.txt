@@ -1,0 +1,28 @@
+Warning: Maximum heap size rounded up to 512 MB
+javax.management.RuntimeErrorException: Error thrown in preRegister method
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.throwMBeanRegistrationException(DefaultMBeanServerInterceptor.java:977)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.preRegister(DefaultMBeanServerInterceptor.java:998)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:908)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:890)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320)
+        at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+        at ThreadCpuTimesDeadlock.main(ThreadCpuTimesDeadlock.java:52)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+        at com.sun.javatest.regtest.agent.MainWrapper$MainThread.run(MainWrapper.java:127)
+        at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.AssertionError: Counter threads does not exist
+        at java.management/sun.management.HotspotCompilation.lookup(HotspotCompilation.java:126)
+        at java.management/sun.management.HotspotCompilation.initCompilerCounters(HotspotCompilation.java:136)
+        at java.management/sun.management.HotspotCompilation.<init>(HotspotCompilation.java:54)
+        at java.management/sun.management.ManagementFactoryHelper.getHotspotCompilationMBean(ManagementFactoryHelper.java:447)
+        at java.management/sun.management.ManagementFactoryHelper.registerInternalMBeans(ManagementFactoryHelper.java:511)
+        at java.management/sun.management.HotspotInternal.preRegister(HotspotInternal.java:58)
+        at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister(MBeanSupport.java:167)
+        at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.preRegister(DefaultMBeanServerInterceptor.java:996)
+        ... 11 more
+
+JavaTest Message: Test threw exception: javax.management.RuntimeErrorException: Error thrown in preRegister method
+JavaTest Message: shutting down test
