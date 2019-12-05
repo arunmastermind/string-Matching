@@ -1,10 +1,14 @@
-import pandas as pd
+import numpy as np
+import tensorflow as tf
+import tensorflow.keras
+
+x = np.random.random((100,2))
+# print(x)
+y = tensorflow.keras.utils.to_categorical(np.random.randint(10, size=(1000, 1)), num_classes=10)
+print(y[2])
+
 a = [1,2,3,4,5]
-b = [2,4,6,8,0]
-df1 = pd.DataFrame(a)
+y1 = tensorflow.keras.utils.to_categorical(a, num_classes=10)
+print(y1[2])
 
-df2 = pd.DataFrame(b)
-
-df_concat = pd.concat([df1, df2], axis=0)
-
-print(df_concat)
+# print(np.random.randint(10, size=(1000, 1)))
